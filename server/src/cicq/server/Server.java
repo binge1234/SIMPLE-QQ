@@ -26,7 +26,7 @@ public class Server {
        
       Map<String, PrintWriter> map = new HashMap<>();
       while(true){
-      Socket socket = server.accept();
+      Socket socket = server.accept();//服务端等待客户端连接，若连接上为每个客户端开启一个线程去处理
       System.out.println(socket.getLocalAddress());
       Runnable handler = new ServerHandler(map,socket);
       Thread thread = new Thread(handler);

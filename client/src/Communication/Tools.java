@@ -10,6 +10,11 @@ import java.util.*;
  *
  * @author 志彬
  */
+
+/**
+ *
+ * 用来判断两个集合的元素是否都相同。
+ */
 public class Tools {
     
     static Boolean judge(List<String> a ,List<String> b){

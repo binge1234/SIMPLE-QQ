@@ -20,7 +20,7 @@ import java.util.Map;
 public class Server {
         public static void main(String[] args) throws IOException {
         // TODO code application logic here
-      ServerSocket server = new ServerSocket(888);
+      ServerSocket server = new ServerSocket(888);//服务器端开启服务端口
       System.out.println(server.getChannel());
       System.out.println(server.getLocalSocketAddress());
        

@@ -43,7 +43,7 @@ public class ServerHandler implements Runnable{
             
             
            
-       while(true){
+       while(true){//创建循环用来随时接受客户端的信息，通过判断客户端信息处理相应内容
                 String request = buffer_reader.readLine();
                 if(request.equals("login")){
                 connect_client(request);
@@ -70,7 +70,7 @@ public class ServerHandler implements Runnable{
 
     }
     
-    public void connect_client(String request) throws IOException{
+    public void connect_client(String request) throws IOException{//客户端连接请求
            
                  String name = buffer_reader.readLine();
                  String password = buffer_reader.readLine();
@@ -87,7 +87,7 @@ public class ServerHandler implements Runnable{
         
     }
     
-    public void init_client(String request){
+    public void init_client(String request){//为每个成功登录客户端返回在线名单
        for(String key : map.keySet()){
         System.out.println("666");
         names.append(key);
